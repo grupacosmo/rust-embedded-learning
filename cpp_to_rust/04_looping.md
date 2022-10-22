@@ -2,7 +2,7 @@
 ## C++
 ```c++
 while (true) {
-    
+
 }
 ```
 
@@ -10,6 +10,25 @@ while (true) {
 ```rust
 loop {
 
+}
+```
+
+# Breaking loops
+## C++
+```c++
+while (true) {
+    if (x > 0) {
+        break;
+    }
+}
+```
+
+## Rust
+```rust
+loop {
+    if x > 0 {
+        break;
+    }
 }
 ```
 
