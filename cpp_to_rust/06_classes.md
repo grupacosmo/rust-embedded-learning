@@ -150,7 +150,7 @@ impl Widget {
 ```c++
 struct Base {
     int x;
-}
+};
 
 struct Widget : Base {
     int y;
@@ -158,7 +158,7 @@ struct Widget : Base {
 ```
 
 ## Rust
-Rust doesn't support data inheritance. The best you can do is composition.
+Rust doesn't support inheritance. The best you can do is composition.
 ```rust
 struct Base {
     pub x: i32
