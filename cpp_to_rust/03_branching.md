@@ -28,7 +28,7 @@ let x = if x > 0 {
     2
 } else {
     3
-}
+};
 ```
 
 # switch statements
@@ -55,4 +55,4 @@ let result = match x {
     0 => f(),
     1 | 2 => g(),
     _ => h()
-}
+};

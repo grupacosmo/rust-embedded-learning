@@ -8,7 +8,7 @@ void f() {
 
 ## Rust
 ```rust
-// `fn` is a keyword used for declaring functions
+// `fn` is a keyword used to declare functions
 fn f() {
 
 }
@@ -48,6 +48,7 @@ fn f(a: i32, b: i32) -> i32 {
     a + b
 }
 ```
+Passing by value doesn't always mean passing _by copy_. In Rust, values of simple datatypes are copied, while values of complex datatypes are _moved_ (more on that in future chapters).
 
 # Passing parameters by const reference
 ## C++
@@ -69,6 +70,7 @@ fn f(a: &i32) {
 let a = 0;
 f(&a); // notice `&`
 ```
+We call the process of creating a reference _borrowing_. You can have multiple immutable references to the object at the same time, that's why immutable references are often called _shared references_.
 
 # Passing parameters by non-const reference
 ## C++
@@ -88,8 +90,25 @@ fn f(a: &mut i32) {
     *a = 5;
 }
 
-let a = 0;
+let mut a = 0;
 f(&mut a); // notice `&mut`
+```
+Rust has a additional rule at play. You cannot create a mutable reference if there exists any other reference (immutable or mutable) to the variable. That's why mutable references are often called _exclusive references_.
+
+```rust
+let mut a = 0;
+let r: &mut i32 = &mut a;
+f(&a);
+f(r);
+// error[E0502]: cannot borrow `a` as immutable because it is also borrowed as mutable
+//  --> <source>:6:7
+//   |
+// 5 |     let r = &mut a;
+//   |             ------ mutable borrow occurs here
+// 6 |     f(&a);
+//   |       ^^ immutable borrow occurs here
+// 7 |     f(&r);
+//   |       -- mutable borrow later used here
 ```
 
 # Overloading
