@@ -2,10 +2,15 @@
 
 ## Recommended learning path
 ### 1. Begin with Rust Basics
-* [The Rust Programming Language](https://doc.rust-lang.org/book/) - Introductory book to Rust.
-* [Rustlings](https://github.com/rust-lang/rustlings) - Exercises.
+* [The Rust Programming Language](https://doc.rust-lang.org/book/) - Introductory book to Rust. It's fun and accessible, but it assumes you have programmed before in a different programming language.
+* [Rustlings](https://github.com/rust-lang/rustlings) - Exercises (please read their `README.md`).
+* [Rust By Example](https://doc.rust-lang.org/rust-by-example/) - A set of examples, it will come in handy for quickly refreshing the language syntax.
 
 It is recommended to complete corresponding exercises after each chapter of the book. See the [mapping](https://github.com/rust-lang/rustlings/tree/main/exercises#exercise-to-book-chapter-mapping).
+
+Alternatively:
+* [Rust Programming Tutorial](https://youtu.be/T_KrYLW4jw8) - A Youtube course, which is more accessible for people who have just started programming.
+* [Easy Rust](https://dhghomon.github.io/easy_rust/Chapter_1.html) - This is an introductory Rust book written in easy English. May be useful if you strugge with the [The Rust Programming Language](https://doc.rust-lang.org/book/) book.
 
 ### 2. Learn the basics of embedded
 * [The Discovery book](https://docs.rust-embedded.org/discovery/f3discovery/02-requirements/index.html) - Introductory book to embedded programming in Rust. No prior experience required.
