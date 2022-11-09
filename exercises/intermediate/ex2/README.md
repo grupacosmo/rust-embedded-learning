@@ -1,4 +1,4 @@
-# Exercise 1
+# Command-line text rating application
 Write a simple command-line textfile grading program. Use this project as a template. 
 
 The program should accept directory path as it's input, print contents of each file in the directory and ask user for a rating from 1 to 5. The program should output summary of the ratings to stdout.
