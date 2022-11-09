@@ -10,7 +10,7 @@ It is recommended to complete corresponding exercises after each chapter of the 
 
 Alternatively:
 * [Rust Programming Tutorial](https://youtu.be/T_KrYLW4jw8) - A Youtube course, which is more accessible for people who have just started programming.
-* [Easy Rust](https://dhghomon.github.io/easy_rust/Chapter_1.html) - This is an introductory Rust book written in easy English. May be useful if you strugge with the [The Rust Programming Language](https://doc.rust-lang.org/book/) book.
+* [Easy Rust](https://dhghomon.github.io/easy_rust/Chapter_1.html) - This is an introductory Rust book written in easy English. May be useful if you struggle with the [The Rust Programming Language](https://doc.rust-lang.org/book/) book.
 
 ### 2. Learn the basics of embedded
 * [The Discovery book](https://docs.rust-embedded.org/discovery/f3discovery/02-requirements/index.html) - Introductory book to embedded programming in Rust. No prior experience required.
