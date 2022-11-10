@@ -21,47 +21,78 @@ Program expects 3 inputs from `stdin`:
 Result of given calculation
 
 ## Hints
-Use `io::read_to_string` function from Rust 1.65. Run `rustup update` just to be sure that you have it.
-
-`io::read_to_string` can fail to read the input string, thus it doesn't return the `String` directly. It returns an _object_ of type `Result<String, io::Error>` instead. You can read it as "`Result` containing either a `String` or an `io::Error`". Don't worry about the details of `Result` type for now.
+Use `io::stdin` function to obtain an object that represents the standard input stream.
 
 ```rust
 use std::io;
 
 fn main() {
-    let result: Result<String, io::Error> = io::read_to_string(io::stdin());
-
-    // Since the `String` is inside the `Result` object, it needs to be unwrapped.
-    // You can do that with an `expect` method.
-    // If the `String` is not present inside the Result object, the application will crash
-    // displaying provided message.
-    let input: String = result.expect("Failed to read input");
+    let stdin = io::stdin();
 }
 ```
 
-This may look weird at first, but `Result` is a neat way to ensure that you don't forget to handle the error.
+Then, use `read_line` to read a line from `stdin`.
 
-Here is a simplified version of the previous example.
 
 ```rust
 use std::io;
 
 fn main() {
-    // we call `expect` directly on the returned value
-    let input = io::read_to_string(io::stdin()).expect("Failed to read input");
+    let stdin = io::stdin();
+    let mut input = String::new();
+    stdin.read_line(&mut input);
 }
 ```
 
-Ok, but what if you wanted to read an `i32` instead of a `String`? You'd need to _parse_ the input string to `i32`.
+Now, Rust will start to complain a little bit.
+```
+warning: unused `Result` that must be used
+ --> src\main.rs:6:5
+  |
+6 |     stdin.read_line(&mut input);
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_must_use)]` on by default
+  = note: this `Result` may be an `Err` variant, which should be handled
+```
+ 
+Rust tells us that `read_line` returned a value of type `Result` that may be an `Err` variant. `Result`s in Rust are used to report errors. To make the compiler happy, we will have to _handle_ the error somehow. For this exercise, we can just use the `expect` method to crash the aplication if an error occured.
 
 ```rust
 use std::io;
 
 fn main() {
-    let input = io::read_to_string(io::stdin())
-        .expect("Failed to read input")
+    let stdin = io::stdin();
+    let mut input = String::new();
+    let result = stdin.read_line(&mut input);
+    result.expect("Failed to read line");
+}
+```
+
+Here is a more condensed version of the previous example:
+
+```rust
+use std::io;
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Failed to read input");
+}
+```
+
+Ok, but what if you wanted to read an `i32` instead of a `String`? You'd need to _parse_ the input string to `i32`:
+
+```rust
+use std::io;
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Failed to read input");
+    let input = input
         .trim() // removes '\n' attached to the end of the string
-        .parse::<i32>() // parses String to the type specified in the turbofish `::<>`
-        .expect("Failed to parse input");
+        .parse::<i32>() // parses String to the type specified inside the turbofish `::<>`
+        .expect("Failed to parse input to i32");
 }
 ```
+
+Don't worry if you don't fully grasp how this works right now. All of the functionalities used here are well explained in the book.
