@@ -33,6 +33,7 @@ fn main() {
 
 Then, use `read_line` to read a line from `stdin`.
 
+
 ```rust
 use std::io;
 
