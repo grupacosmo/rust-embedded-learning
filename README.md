@@ -6,7 +6,7 @@
 * [Rustlings](https://github.com/rust-lang/rustlings) - Exercises (please read their `README.md`).
 * [Rust By Example](https://doc.rust-lang.org/rust-by-example/) - A set of examples, it will come in handy for quickly refreshing the language syntax.
 
-It is recommended to complete corresponding exercises after each chapter of the book. See the [mapping](https://github.com/rust-lang/rustlings/tree/main/exercises#exercise-to-book-chapter-mapping).
+It is recommended to complete corresponding rustlings exercises after each chapter of the book. See the [mapping](https://github.com/rust-lang/rustlings/tree/main/exercises#exercise-to-book-chapter-mapping).
 
 Alternatively:
 * [Rust Programming Tutorial](https://youtu.be/T_KrYLW4jw8) - A Youtube course, which is more accessible for people who have just started programming.
