@@ -29,5 +29,5 @@ Depending on your needs, you may want to learn things in a different order, So h
 ## Great articles
 ### Type-driven development
 * [Parse, don't validate - Alexis King](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
-### Automatic reasoning
+### Automated reasoning
 * [Announcing the Kani Rust Verifier Project](https://model-checking.github.io/kani-verifier-blog/2022/05/04/announcing-the-kani-rust-verifier-project.html)
