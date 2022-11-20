@@ -26,8 +26,30 @@ Depending on your needs, you may want to learn things in a different order, So h
  * [Programming Rust](https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/) - Rust book for experienced developers.
  * [Crust of Rust: Build Scripts and Foreign-Function Interfaces (FFI)](https://www.youtube.com/watch?v=pePqWoTnSmQ) - 2 hour video about interfacing with C code.
 
-## Great articles
-### Type-driven development
-* [Parse, don't validate - Alexis King](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
+## Great articles/talks
 ### Automated reasoning
+Articles:
 * [Announcing the Kani Rust Verifier Project](https://model-checking.github.io/kani-verifier-blog/2022/05/04/announcing-the-kani-rust-verifier-project.html)
+
+### Data-Oriented Design (DOD)
+Articles:
+* [If a Tree Falls in a Forest, Does It Overflow the Stack?](https://matklad.github.io/2022/11/18/if-a-tree-falls-in-a-forest-does-it-overflow-the-stack.html)
+
+Talks:
+* [RustConf 2018 - Closing Keynote - Using Rust For Game Development by Catherine West](https://www.youtube.com/watch?v=aKLntZcp27M)
+
+### Error handling
+Articles:
+* [Error Handling In Rust - A Deep Dive](https://www.lpalmieri.com/posts/error-handling-rust/)
+
+Talks:
+* [RustConf 2020 - Error handling Isn't All About Errors by Jane Lusby](https://www.youtube.com/watch?v=rAF8mLI0naQ)
+
+### Safety-critical, real-time systems
+Talks:
+* [RustConf 2022 - All aboard the Rust (electric freight) train! by Julie Wang](https://www.youtube.com/watch?v=qaj5q88eLjk)
+
+### Type-driven development
+Talks:
+* ["Type-Driven API Design in Rust" by Will Crichton](https://www.youtube.com/watch?v=bnnacleqg6k)
+
